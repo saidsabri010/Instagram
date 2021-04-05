@@ -8,7 +8,7 @@
         </div>
         <div class="col-9">
             <div>
-                <h2> <b>Computer Science</b> </h2>
+                <h2> <b> {{ Auth::user()->username }}</b> </h2>
             </div>
             <div class="d-flex">
                 <div class="pl-5" > <strong>10K</strong> Posts </div>
