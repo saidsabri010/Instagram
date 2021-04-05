@@ -26,13 +26,13 @@
         </div>
     </div>
     <div class="row pt-4 ">
-        <div class="col-3" >
+        <div class="col-4" >
             <img  src="https://images.pexels.com/photos/48753/pexels-photo-48753.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" style="width:100%">
         </div>
-        <div class="col-3" >
+        <div class="col-4" >
             <img src="https://images.pexels.com/photos/7057/desk-office-computer-imac.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" style="width:100%">
         </div>
-        <div class="col-3 img-responsive pull-right">
+        <div class="col-4">
             <img src="https://images.pexels.com/photos/7374/startup-photos.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" style="width:100%">
         </div>
     </div>
