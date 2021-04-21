@@ -7,8 +7,9 @@
           <img  class="img-fluid" src="http://techfameplus.com/wp-content/uploads/2015/01/Spartan-Logo-design-By-Haider-Ali.png" class="img-rounded">
         </div>
         <div class="col-9">
-            <div>
+            <div class="d-flex justify-content-between align-items-baseline">
                 <h2> <b> {{ Auth::user()->username }}</b> </h2>
+                <a href="#">Add new Post</a>
             </div>
             <div class="d-flex">
                 <div class="pl-5" > <strong>10K</strong> Posts </div>
