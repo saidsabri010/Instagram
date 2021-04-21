@@ -15,14 +15,11 @@
                 <div class="pl-5" ><strong>7K</strong> Followers</div>
                 <div class="pl-5" ><strong>500</strong> Following</div>
             </div>
-            <div class="font-weight-bold pt-4" ><p>ComputerScience.ogr</p></div>
+            <div class="font-weight-bold pt-4" >{{$user->profile->title}}</div>
             <div>
-                Computer Science is the study of computers and computational systems. 
-                    Unlike electrical and computer engineers, computer scientists deal 
-                    mostly with software and software systems;
-                    this includes their theory, design, development, and application.
+                {{$user->profile->description}}
             </div>
-            <div><a href="#">ComputerScience.org</a></div>
+            <div><a href="#">{{$user->profile->url}}</a></div>
         </div>
     </div>
     <div class="row pt-4 ">
