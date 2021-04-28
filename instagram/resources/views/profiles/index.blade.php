@@ -9,30 +9,27 @@
         <div class="col-9">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h2> <b> {{ Auth::user()->username }}</b> </h2>
-                <a href="#">Add new Post</a>
+                <a href="/p/create">Add new Post</a>
             </div>
             <div class="d-flex">
-                <div class="pl-5" > <strong>10K</strong> Posts </div>
+                <div class="pl-5" > <strong>{{$user->posts->count()}}</strong> Posts </div>
                 <div class="pl-5" ><strong>7K</strong> Followers</div>
                 <div class="pl-5" ><strong>500</strong> Following</div>
             </div>
-            <div class="font-weight-bold pt-4" >{{$user->profile->title}}</div>
+            <div class="font-weight-bold pt-4" >{{$user->profile['title']}}</div>
             <div>
-                {{$user->profile->description}}
+                {{$user->profile['description']}}
             </div>
-            <div><a href="#">{{$user->profile->url}}</a></div>
+            <div><a href="#">{{$user->profile['url']}}</a></div>
         </div>
     </div>
-    <div class="row pt-4 ">
+    <div class="row pt-5 ">
+        @foreach ($user->posts as $post)
         <div class="col-4" >
-            <img  src="https://images.pexels.com/photos/48753/pexels-photo-48753.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" style="width:100%">
+            <img  src="/storage/{{$post->image}}" style="  width:  100%; height: 100%;">
         </div>
-        <div class="col-4" >
-            <img src="https://images.pexels.com/photos/7057/desk-office-computer-imac.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" style="width:100%">
-        </div>
-        <div class="col-4">
-            <img src="https://images.pexels.com/photos/7374/startup-photos.jpg?auto=compress&cs=tinysrgb&h=750&w=1260" style="width:100%">
-        </div>
+        @endforeach
+       
     </div>
 </div>
 @endsection
