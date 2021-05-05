@@ -14,7 +14,7 @@ class ProfileController extends Controller
 
     public function edit(User $user)
     {
-        return view('profiles.edit',compact('user'));
+       return view('profiles.edit',compact('user'));
     }
 
     public function update(User $user)
@@ -25,7 +25,7 @@ class ProfileController extends Controller
           'url' => '',
           'image' => '',
       ]);
-      $user->profile->update($data);
+      auth()->user()->profile->update($data);
       return redirect("/profile/{$user->id}");
     }
 }
