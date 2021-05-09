@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-3">
-          <img  class="img-fluid" src="http://techfameplus.com/wp-content/uploads/2015/01/Spartan-Logo-design-By-Haider-Ali.png" class="img-rounded">
+          <img  src="/storage/{{$user->profile->image}}" class="rounded-circle w-100">
         </div>
         <div class="col-9">
             <div class="d-flex justify-content-between align-items-baseline">
