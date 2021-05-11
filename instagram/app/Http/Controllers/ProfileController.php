@@ -11,12 +11,14 @@ class ProfileController extends Controller
     public function index(User $user)
     {
       $follows = (auth()->user()) ? auth()->user()->following->contains($user->id) : false;
-        return view('profiles.index',compact('user', 'follows'));
+      $followersCount = count((array)$user->profile->followers);
+      $followingCount = $user->following->count();
+        return view('profiles.index',compact('user', 'follows', 'followersCount','followingCount'));
     }
 
     public function edit(User $user)
     {
-       return view('profiles.edit',compact('user'));
+       return view('profiles.edit',compact('user','follows','followersCount'));
     }
 
     public function update(User $user)
