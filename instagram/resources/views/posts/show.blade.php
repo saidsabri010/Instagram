@@ -16,7 +16,10 @@
                 <div class="font-weight-bold">
                     <a href="/profile/{{$post->user->id}}"><span class="text-dark">{{$post->user->username}}</span></a>
                     <a class="pl-2" href="#">Follow</a>
+                    
+            
                 </div>
+
             </div>
            </div>
            <hr>
@@ -27,6 +30,18 @@
             </p>
            
        </div>
+       <form class="d-flex align-items-center"
+                    method="post" 
+                    action="/p/{{$post->id}}"> 
+            
+                    @csrf
+                    @method('DELETE')
+            
+                    <button
+                      type="submit"
+                      onclick="return confirm('Are you sure?')"
+                      class="btn btn-sm btn-fill btn-primary">Remove</button>
+                  </form>
    </div>
     </div>
 </div>
